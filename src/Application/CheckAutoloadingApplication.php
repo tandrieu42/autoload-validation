@@ -41,7 +41,7 @@ class CheckAutoloadingApplication extends Application
      *
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
-    protected function getCommandName(InputInterface $input)
+    protected function getCommandName(InputInterface $input): ?string
     {
         return 'phpcq:check-autoloading';
     }
@@ -51,7 +51,7 @@ class CheckAutoloadingApplication extends Application
      *
      * @return array
      */
-    protected function getDefaultCommands()
+    protected function getDefaultCommands(): array
     {
         // Keep the core default commands to have the HelpCommand
         // which is used when using the --help option
@@ -68,7 +68,7 @@ class CheckAutoloadingApplication extends Application
      *
      * @return InputDefinition
      */
-    public function getDefinition()
+    public function getDefinition(): InputDefinition
     {
         $inputDefinition = parent::getDefinition();
         // clear out the normal first argument, which is the command name
